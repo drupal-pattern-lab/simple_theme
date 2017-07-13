@@ -1,0 +1,19 @@
+{
+  "name": "simple_theme",
+  "description": "simple_theme theme",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "gulp",
+    "compile": "NODE_ENV=production gulp compile",
+    "test": "gulp validate",
+    "postinstall": "cd pattern-lab && composer install --no-interaction"
+  },
+  "dependencies": {
+    "@theme-tools/plugin-browser-sync": "^0.4.0",
+    "@theme-tools/plugin-pattern-lab-php": "^0.4.2",
+    "@theme-tools/plugin-sass": "^0.4.0",
+    "gulp": "github:gulpjs/gulp#4.0"
+  },
+  "devDependencies": {}
+}

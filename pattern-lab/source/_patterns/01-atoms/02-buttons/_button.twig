@@ -1,0 +1,6 @@
+{% set classes = [
+  'button',
+  primary ? 'button--primary',
+] %}
+
+<a href="{{ url }}" class="{{ classes | join(' ') }}">{{ text }}</a>

@@ -1,0 +1,5 @@
+core:
+  css:
+    theme:
+      dist/simple_theme.css:
+        preprocess: true

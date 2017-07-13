@@ -1,0 +1,74 @@
+{
+	"name":             "drupal-pattern-lab/simple_theme",
+	"description":      "A simple Drupal theme with Pattern Lab",
+	"keywords":         ["pattern lab", "drupal"],
+	"homepage":         "http://drupal-pattern-lab.github.io",
+	"license":          "MIT",
+	"type":             "project",
+	"authors": [
+		{
+			"name":         "Evan Lovely",
+			"homepage":     "http://evanlovely.com"
+		}
+	],
+	"autoload": {
+		"psr-0": {
+			"PatternLab":   "core/src/"
+		}
+	},
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/drupal-pattern-lab/patternlab-php-core"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/drupal-pattern-lab/patternengine-php-twig"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/drupal-pattern-lab/styleguidekit-assets-default"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/drupal-pattern-lab/styleguidekit-twig-default"
+    }
+  ],
+	"require": {
+		"php": ">=5.4",
+		"pattern-lab/core": "^2.0.0",
+		"pattern-lab/patternengine-twig": "^2.0.0",
+		"pattern-lab/styleguidekit-assets-default": "^3.0.0",
+		"pattern-lab/styleguidekit-twig-default": "^3.0.0"
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"PatternLab\\Installer::postInstallCmd"
+		],
+		"post-update-cmd": [
+			"PatternLab\\Installer::postUpdateCmd"
+		],
+		"post-root-package-install": [
+			"PatternLab\\Installer::setProjectInstall",
+			"PatternLab\\Installer::getSuggestedStarterKits",
+			"PatternLab\\Installer::getConfigOverrides"
+		],
+		"post-package-install": [
+			"PatternLab\\Installer::postPackageInstall"
+		],
+		"post-package-update": [
+			"PatternLab\\Installer::postPackageUpdate"
+		],
+		"pre-package-uninstall": [
+			"PatternLab\\Installer::prePackageUninstall"
+		]
+	},
+	"extra": {
+		"patternlab": {
+			"starterKitSuggestions": [],
+      "config": {
+        "overrideConfig": false
+      }
+		}
+	}
+}

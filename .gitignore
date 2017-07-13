@@ -1,0 +1,4 @@
+node_modules
+pattern-lab/vendor
+pattern-lab/public
+dist

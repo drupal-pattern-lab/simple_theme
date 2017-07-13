@@ -1,0 +1,13 @@
+name: simple_theme
+type: theme
+description: A theme
+base theme: stable
+core: 8.x
+libraries:
+  - simple_theme/core
+regions:
+  content: Content
+component-libraries:
+  atoms:
+    paths:
+      - pattern-lab/source/_patterns/01-atoms

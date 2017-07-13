@@ -1,0 +1,6 @@
+{# Including from `pattern-lab/source/_patterns/01-atoms/02-buttons/_button.twig` #}
+{# `@atoms` is configured in `simple_theme.info.yml` #}
+{% include '@atoms/02-buttons/_button.twig' with {
+  primary: true,
+  text: content.field_primary_button.value,
+} %}
